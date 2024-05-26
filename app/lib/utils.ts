@@ -10,9 +10,4 @@ export const getAllTasks = () => {
   return tasks.reverse();
 };
 
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
