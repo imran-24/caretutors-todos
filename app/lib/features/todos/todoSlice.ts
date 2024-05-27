@@ -18,14 +18,8 @@ const todoSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
-    add: (state) => {
-      const task = {
-        id: generateUniqueId(),
-        title: "Title",
-        description: "description",
-      };
-
-      // let existingTasks = getAllTasks();
+    add: (state, action) => {
+      const task = action.payload;
 
       state.todos.unshift(task);
       localStorage.setItem("tasks", JSON.stringify(state.todos));
